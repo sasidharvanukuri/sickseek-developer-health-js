@@ -13,13 +13,27 @@ chrome.storage.onChanged.addListener(function(changes, area) {
   }
 });
 
-
-function showNotification(title, message) {
+function notification(){
   var notif = new Notification(title, {
     body: message,
     tag: "standup",
     icon: "notification.png"
   });
+}
+function showNotification(title, message) {
+  if (!("Notification" in window)) {
+    alert("This browser does not support desktop notification");
+  }
+  else if (Notification.permission === "granted") {
+    notification()
+  } else if (Notification.permission !== "denied") {
+    Notification.requestPermission().then(function (permission) {
+      if (permission === "granted") {
+        notification()
+      }
+    });
+  }
+  
 }
 
 function setupAlarm() {
