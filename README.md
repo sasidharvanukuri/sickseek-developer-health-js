@@ -1,7 +1,7 @@
 # DEVELOPER HEALTH - SICKSEEK (Test)
 
 Developer Health is "chrome based extension" which helps to remind developers to standup and relax after certain time (based on their choice).
-
+**Do not Forget to give feed back : https://forms.gle/mHH2fCVVGvWd1E1z6
 # Features!
 
   - Select a "Frequency" based on choice (by default - every 1 hour)
@@ -36,7 +36,8 @@ Dillinger is currently extended with the following plugins. Instructions on how 
 ### Development
 This is released for testing purpose only ,Do you want to contribute? Great!
 Contact me : machirajusaisandeep@outlook.com
-
+### Feedback 
+https://forms.gle/mHH2fCVVGvWd1E1z6
 ### Author
 
 **Sandeep Machiraju**
