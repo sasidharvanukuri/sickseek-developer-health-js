@@ -13,7 +13,7 @@ chrome.storage.onChanged.addListener(function(changes, area) {
   }
 });
 
-function notification(){
+function notification(title, message){
   var notif = new Notification(title, {
     body: message,
     tag: "standup",
@@ -25,11 +25,11 @@ function showNotification(title, message) {
     alert("This browser does not support desktop notification");
   }
   else if (Notification.permission === "granted") {
-    notification()
+    notification(title,message)
   } else if (Notification.permission !== "denied") {
     Notification.requestPermission().then(function (permission) {
       if (permission === "granted") {
-        notification()
+        notification(title,message)
       }
     });
   }
